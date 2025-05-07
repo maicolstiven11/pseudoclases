@@ -1,0 +1,360 @@
+:root {
+    /* Variables de colores para reutilizar */
+    --color: #0000ff;
+    --ejer21-titulo: #da0000;
+    --ejer21-fondo: #79bd7f;
+    --ejer22-fondo: rgb(135, 118, 118);
+}
+
+* {
+    /* Ajustes generales para todos los elementos */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Fondo de la página */
+    background-color: var(--ejer22-fondo, rgb(175, 200, 127));
+}
+
+div {
+    /* Espaciado dentro de divs */
+    margin-top: 30px;
+    padding: 0 30px 0 20px;
+}
+
+.ejer1 button {
+    /* Botón con estilos y transición */
+    color: brown;
+    background-color: steelblue;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    transition: 1s;
+    font-size: 16px;
+}
+
+.ejer1 button:hover {
+    /* Cambio de color al pasar el mouse */
+    background-color: yellowgreen;
+}
+
+.oculto {
+    /* Elemento oculto */
+    display: none;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f1c40f;
+    border-left: 4px solid #f4f4;
+    color: #0d49a1;
+    transition: 1s;
+}
+
+.oculto:target {
+    /* Se muestra al hacer clic desde un enlace */
+    display: block;
+}
+
+.ejer2 {
+    /* Enlaces sin subrayado */
+    color: black;
+    text-decoration: none;
+}
+
+.ejer3 li:first-child {
+    /* Primer ítem en cursiva y azul */
+    font-style: italic;
+    color: steelblue;
+    font-weight: 600; /* Corregido: sin px */
+}
+
+.ejer4-5-6 {
+    /* Contenedor con padding y fondo */
+    width: 70%;
+    background-color: #d9d7d7;
+    margin-left: 20px;
+    margin-top: 10px;
+    padding: 30px;
+}
+
+.ejer4-5-6 h3 {
+    /* Título centrado y en negrita */
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 900; /* Corregido */
+}
+
+.ejer4-5-6 input {
+    /* Campos del formulario */
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cacaca;
+    margin-bottom: 23px;
+    transition: 0.8s;
+}
+
+.ejer4-5-6 input[type="text"]:invalid {
+    border-color: brown;
+}
+
+.ejer4-5-6 input[type="email"] {
+    border-color: blue;
+}
+
+.ejer4-5-6 input[type="password"] {
+    margin-bottom: 5px;
+}
+
+.ejer4-5-6 input:focus {
+    border: 1px solid #000;
+}
+
+.ejer7 .text:only-of-type {
+    /* Único texto resaltado */
+    color: tomato;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.ejer8 .parrafo:first-of-type {
+    /* Primer párrafo destacado */
+    font-weight: bold;
+    font-style: italic;
+    color: seagreen;
+}
+
+.ejer9 h4 {
+    /* Título azul en negrita */
+    color: var(--color);
+    font-weight: bold;
+}
+
+.ejer10 .navegar {
+    /* Menú en fila con separación */
+    display: flex;
+    justify-content: space-between;
+}
+
+.navegar a {
+    /* Estilo de enlaces de navegación */
+    text-decoration: none;
+    font-weight: 500;
+    color: black;
+    padding: 20px;
+    background-color: brown;
+    border-radius: 5px;
+}
+
+.navegar a:hover {
+    /* Cambio al pasar el mouse */
+    background-color: var(--color);
+    color: white;
+}
+
+.ejer11 h3::before {
+    /* Emoji antes del título */
+    content: "🐱‍👤";
+    margin-right: 11px;
+}
+
+.ejer12 p {
+    font-weight: bold;
+}
+
+.ejer12 p::after {
+    content: "--:--:--:--:--:--*--*:p";
+    margin-left: 5px;
+}
+
+.ejer13 button {
+    /* Botón con fondo extra usando ::after */
+    position: relative;
+    background-color: cadetblue;
+    padding: 15px 20px;
+    font-size: 15px;
+    border: none;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.ejer13 button::after {
+    /* Fondo decorativo detrás del botón */
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 100%;
+    height: 100%;
+    background-color: yellowgreen;
+    z-index: -1;
+    border-radius: 5px;
+}
+
+.ejer14 .comillas {
+    font-weight: bold;
+}
+
+.ejer14 .comillas::before,
+.comillas::after {
+    content: "''"; /* Comillas decorativas */
+}
+
+.ejer15 {
+    position: relative;
+    display: inline-block;
+}
+
+.ejer15::before {
+    /* Emoji decorativo antes del input */
+    content: "🔥";
+    position: absolute;
+    padding-left: 10px;
+    padding-top: 33px;
+    transform: translateY(-50%);
+}
+
+.ejer15 input {
+    padding-left: 30px;
+    height: 32px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.ejer16 {
+    /* Tarjeta con bordes y padding */
+    display: inline-block;
+    width: 100%;
+    border: 1px solid #cacaca;
+    padding: 20px;
+    position: relative;
+}
+
+.ejer16 img {
+    /* Imagen dentro de tarjeta */
+    position: relative;
+    width: 100%;
+}
+
+.ejer17 button {
+    /* Botón estilo moderno */
+    position: relative;
+    background-color: cadetblue;
+    padding: 15px 20px;
+    font-size: 15px;
+    border: none;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.ejer17 {
+    /* Caja estilo tarjeta con sombra */
+    --color-borde: #6a66;
+    width: 300px;
+    padding: 20px;
+    background-color: cadetblue;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+    font-family: sans-serif;
+    margin: 20px;
+}
+
+.ejer17 .boton-eliminar {
+    /* Botón para cerrar o eliminar */
+    --color-boton: #e847bf;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 17px;
+    color: white;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.ejer17 .boton-eliminar:hover {
+    color: brown;
+}
+
+.ejer18 .navbarra {
+    /* Barra de navegación fija */
+    display: flex;
+    position: fixed;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.ejer18 .navbarra a {
+    /* Enlaces de navegación */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    color: black;
+    background-color: slateblue;
+    padding: 7px;
+    border-radius: 5px;
+}
+
+.navbarra a:hover {
+    /* Efecto hover */
+    background-color: aqua;
+    color: white;
+}
+
+.ejer19 .caja {
+    /* Cuadro superpuesto con z-index */
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    color: white;
+    font-size: 20px;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+}
+
+.caja1 {
+    background-color: red;
+    left: 100px;
+    z-index: 1;
+}
+
+.caja2 {
+    background-color: blue;
+    left: 140px;
+    z-index: 2;
+}
+
+.ejer20 {
+    /* Contenedor gris */
+    position: relative;
+    background-color: grey;
+}
+
+.card20 {
+    /* Tarjeta centrada con sombra */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: var(--ejer21-fondo);
+    width: 350px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 1);
+    text-align: center;
+}
+
+.card20 h2 {
+    font-weight: bold;
+    margin-top: 5px;
+    color: var(--ejer21-titulo);
+}
+
+.card20 p {
+    color: black;
+}
